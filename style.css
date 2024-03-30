@@ -1,0 +1,15 @@
+#gameArea {
+  background-color: blue;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#gameCanvas {
+  border: 1px solid#000;
+}
+
+#score {
+  margin-top: 10px;
+  font-size: 18px;
+}
