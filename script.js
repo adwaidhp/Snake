@@ -67,7 +67,7 @@ function gameOver(){
 }
 
 function clearCanvas(){
-    ctx.clearRect(0,0,canvas.clientWidth,canvas.height);
+    ctx.clearRect(0,0,canvas.width,canvas.height);
 }
 
 document.addEventListener('keydown',changeDirection);
@@ -97,7 +97,7 @@ function changeDirection(event){
         dy=0;
 
     }
-    if (keyPressed=== DOWN_KEY && !goingRight){
+    if (keyPressed=== DOWN_KEY && !goingUp){
         dx=0;
         dy=10;
     }
