@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 let snake = [{ x: 10, y: 10 }];
 let dx = 10;
 let dy = 0;
+let time = 400;
 
 let food = {
   x: Math.floor(Math.random() * 39) * 10,
@@ -35,11 +36,12 @@ function moveSnake() {
   snake.unshift(head);
   if (head.x === food.x && head.y === food.y) {
     score += 10;
-    document.getElementById("score").innerText = "Score: " + score;
+    document.getElementById("Score").innerText = "Score: " + score;
     generateFood();
+    time -= 5;
     setTimeout(() => {
       drawFood();
-    }, 300);
+    }, time);
   } else {
     snake.pop();
   }
